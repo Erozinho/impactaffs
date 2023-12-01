@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='JS/script.js')}}" defer></script>
+</head>
+<body>
+    <div class="resultados">
+        <div class="content">
+            <img id="winlose" src="" alt="gif">
+            <h4>Você perdeu!</h4>
+            <p>A palavra correta era: <b>xxx</b></p>
+            <button type=submit class="jogar-novamente">Jogar novamente</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="forca-box">
+            <img id="img-forca" src="{{url_for('static', filename='images/hangman-0.svg')}}" alt="forca.img">
+            <h1>Jogo da Forca!</h1>
+            <p class="word">{{word}}</p>
+            <p class="hint">{{hint}}</p>
+        </div>
+            <div class="game-box">
+                <ul class="display-palavra"></ul>
+                <h4 class="dica">
+                    Dica:
+                </h4>
+                <h4 class="chances">
+                    Chances:
+                    <b> 0 / 6</b>
+                </h4>
+            <div class="teclado"></div>
+        </div>
+    </div>
+</body>
+</html>
